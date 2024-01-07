@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Algorithms Visualized</title>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <canvas id="canvas" width="768px" height="768px"></canvas>
+
+        <div>
+            <div>
+                <label for="map">
+                    <select id="map">
+                        <option value="map_default" selected>Default 64x64</option>
+                        <option value="maze_64x64">Maze 64x64</option>
+                    </select>
+                </label>
+                <label for="speed">
+                    <select id="speed">
+                        <option value="1" selected>x1 Speed</option>
+                        <option value="2">x2 Speed</option>
+                        <option value="4">x4 Speed</option>
+                        <option value="8">x8 Speed</option>
+                        <option value="16">x16 Speed</option>
+                    </select>
+                </label>
+                <label for="algorithm">
+                    <select id="algorithm">
+                        <option value="BFS">Breadth First Search</option>
+                        <option value="DFS">Depth First Search</option>
+                    </select>
+                </label>
+                <button id="run">Run</button>
+            </div>
+
+            <button id="clear">Clear</button>
+
+            <!-- Checkbox for toggling the grid -->
+            <label for="toggle-grid">
+                Toggle Grid
+                <input type="checkbox" id="toggle-grid" checked/>
+            </label>
+
+            <!-- Select available actions -->
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <script src="js/constants.js"></script>
+        <script src="assets/maps.js"></script>
+        <script src="js/grid.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
